@@ -1,0 +1,463 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  background: #334;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+content {
+    height: 100%;
+    background: #fff;
+}
+
+.wrapper {
+    width: 55em;
+    max-width: calc(100% - 2em);
+    margin: 0 auto;
+}
+
+header, footer {
+  color: #f7f7fa;
+  padding: .3em 0;
+}
+header a, footer a {
+    color: rgb(133, 133, 243);
+}
+footer p {
+    font-size: 0.8em;
+}
+
+nav a + a {
+    margin-left: 1.5em;
+}
+
+.copier .options {
+    display: flex;
+    gap: 1em;
+    margin: 1.5em 0 1.5em 0;
+    flex-wrap: wrap;
+}
+.copier .options > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.copier .options > div label {
+    font-size: 0.8em;
+}
+.copier .options .category select {
+    max-width: 10em;
+}
+#ucs-category-select-list-result-count::before {
+    content: "(";
+}
+#ucs-category-select-list-result-count::after {
+    content: ")";
+}
+#sfx-filename {
+    font-weight: bold;
+    margin: 0 .5em 0 .25em;
+}
+label.required::after {
+    content: " *";
+    font-weight: bold;
+    color: red;
+}
+
+a {
+  transition: color 0.2s;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:visited, a:active {
+  color: #9141d2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #334;
+}
+
+h1 .subtitle {
+  display: block;
+  font-size: 1.2rem;
+  color: #445;
+  font-weight: normal;
+}
+
+h2 {
+  color: #3e3e4e;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #445;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: #4e4e5e;
+  margin-bottom: 0.65rem;
+}
+
+h1, h2, h3, h4 {
+  page-break-after: avoid;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+  color: #33a;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #119;
+}
+
+p {
+  margin-top: 0.5rem;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+li + li {
+  margin-top: 0.9rem;
+}
+
+li p:first-child {
+  margin-top: 0;
+}
+
+li p:last-child {
+  margin-bottom: 0;
+}
+
+.warning, .note {
+  color: #fff;
+  border-radius: 1rem;
+  margin: 1.55rem auto;
+  padding: 1.2rem 1.3rem;
+}
+
+.warning a, .note a {
+  color: #abf;
+}
+
+.warning a:hover, .note a:hover {
+  color: #78c;
+}
+
+.warning p:first-child, .note p:first-child {
+  margin-top: 0;
+}
+
+.warning p:last-child, .note p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen {
+  .note {
+    background: #4f5dc9;
+  }
+}
+@media print {
+  .note {
+    background: #444;
+    border: 0.5rem #222 dotted;
+  }
+}
+@media screen {
+  .warning {
+    background: #d54;
+  }
+}
+@media print {
+  .warning {
+    background: #666;
+    border: 0.5rem #000 dashed;
+  }
+}
+.anchor {
+  color: #f53;
+}
+
+.anchor:hover {
+  color: #c12;
+}
+
+hr {
+  border: #99b 0.2rem solid;
+  background: #99b;
+  border-radius: 2rem;
+  margin: 1.55rem auto;
+}
+
+pre {
+  font-size: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #ffb;
+  page-break-inside: avoid;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+tt {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.figure {
+  text-align: center;
+  color: #333;
+  display: block;
+  page-break-before: avoid;
+}
+
+.figure::before {
+  counter-increment: figure;
+  content: "Figure " counter(figure) ": ";
+}
+
+.edmark {
+  margin-left: 0.275rem;
+  font-size: 0.7rem;
+  vertical-align: 0.125rem;
+}
+
+.ircf-0 {
+  color: #ffffff;
+}
+
+.ircf-1 {
+  color: #000000;
+}
+
+.ircf-2 {
+  color: #00007f;
+}
+
+.ircf-3 {
+  color: #009300;
+}
+
+.ircf-4 {
+  color: #ff0000;
+}
+
+.ircf-5 {
+  color: #7f0000;
+}
+
+.ircf-6 {
+  color: #9c009c;
+}
+
+.ircf-7 {
+  color: #fc7f00;
+}
+
+.ircf-8 {
+  color: #ffff00;
+}
+
+.ircf-9 {
+  color: #00fc00;
+}
+
+.ircf-10 {
+  color: #009393;
+}
+
+.ircf-11 {
+  color: #00ffff;
+}
+
+.ircf-12 {
+  color: #0000fc;
+}
+
+.ircf-13 {
+  color: #ff00ff;
+}
+
+.ircf-14 {
+  color: #7f7f7f;
+}
+
+.ircf-15 {
+  color: #d2d2d2;
+}
+
+.ircf-99 {
+  color: #000000;
+}
+
+.ircb-0 {
+  background: #ffffff;
+}
+
+.ircb-1 {
+  background: #000000;
+}
+
+.ircb-2 {
+  background: #00007f;
+}
+
+.ircb-3 {
+  background: #009300;
+}
+
+.ircb-4 {
+  background: #ff0000;
+}
+
+.ircb-5 {
+  background: #7f0000;
+}
+
+.ircb-6 {
+  background: #9c009c;
+}
+
+.ircb-7 {
+  background: #fc7f00;
+}
+
+.ircb-8 {
+  background: #ffff00;
+}
+
+.ircb-9 {
+  background: #00fc00;
+}
+
+.ircb-10 {
+  background: #009393;
+}
+
+.ircb-11 {
+  background: #00ffff;
+}
+
+.ircb-12 {
+  background: #0000fc;
+}
+
+.ircb-13 {
+  background: #ff00ff;
+}
+
+.ircb-14 {
+  background: #7f7f7f;
+}
+
+.ircb-15 {
+  background: #d2d2d2;
+}
+
+.ircb-99 {
+  background: #ffffff;
+}
+
+.ircb {
+  font-weight: bold;
+}
+
+.irci {
+  font-style: italic;
+}
+
+#darkmodebtn {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+}
+
+body, .warning, .note > div {
+  transition: background 0.2s, color 0.2s;
+}
+
+pre {
+  transition: background 0.2s;
+}
+
+.copyright .line, .figure, a, h1, h2, h3, h4 {
+  transition: color 0.2s;
+}
+
+body:not(.dark) .show-when-dark {
+  display: none;
+}
+
+body.dark {
+  background: #334;
+  color: #dddde3;
+}
+
+body.dark .show-when-light {
+  display: none;
+}
+
+body.dark .copyright .line {
+  color: #ccc;
+}
+
+body.dark .warning {
+  background: #63261e;
+  color: #efe9e9;
+}
+
+body.dark .note {
+  background: #1e2963;
+  color: #e9ebef;
+}
+
+body.dark .figure {
+  color: #d2dde3;
+}
+
+body.dark a {
+  color: #7a7aff;
+}
+
+body.dark a:visited, body.dark a:active {
+  color: #c194e6;
+}
+
+body.dark h1 {
+  color: #ceceda;
+}
+
+body.dark h2 {
+  color: #dadae1;
+}
+
+body.dark h3 {
+  color: #c6c6d2;
+}
+
+body.dark h4 {
+  color: #b7b7c3;
+}
+
+body.dark pre {
+  background: #282831;
+}

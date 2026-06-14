@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        <title>UCS Filename Copier</title>
+
+        <link href="/css/open-sans.css" rel="stylesheet" type="text/css" />
+        <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/css/pure-min.css" rel="stylesheet" type="text/css" />
+        <link href="/css/screen.css" rel="stylesheet" type="text/css" />
+
+        <script src="/js/libsearch.browser.js"></script>
+        <script src="/js/ucs.js"></script>
+
+        <meta charset='utf-8'>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <nav>
+                    <a href="/index.html" title="UCS Filename Copier">ucs filename copier</a>
+                    <a href="https://universalcategorysystem.com/" title="Universal Category System"><i class="fa fa-exchange"></i> universal category system</a>
+                </nav>
+            </div>
+        </header>
+        <content>
+            <div class="wrapper">
+                <div id="content">
+                    <h1>UCS Filename Copier</h1>
+                    <p>This tool helps you select, and copy, filenames for sound effects organised under UCS. It's basically a direct copy of the Audio Category Clipper tool, but on the web (and doesn't support AppleScript like that one does!)</p>
+
+                    <div class="copier">
+                        <div class="options">
+                            <div class="category" title="UCS SFX Category"><label class="required">Category</label><input id="ucs-category-search" placeholder="AIRPLANE"/><div><select id="ucs-category-select-list"></select> <span id="ucs-category-select-list-result-count">0</span></div></div>
+                            <div class="user-category" title="User-defined category"><label>User Category</label><input/></div>
+                            <div class="vendor-category" title="Vendor-defined category"><label>Vendor Category</label><input/></div>
+                            <div class="fx-name" title="Title of the sound"><label class="required">FX Name</label><input/></div>
+                            <div class="creator-id" title="Who recorded or designed the sound"><label class="required">Creator ID</label><input/></div>
+                            <div class="source-id" title="Show, project or library the sound was captured for"><label class="required">Source ID</label><input/></div>
+                            <div class="user-data" title="microphone type, location, perspective, etc"><label>User Data</label><input/></div>
+                        </div>
+
+                        <p class="filename">
+                            <label>SFX filename: </label>
+                            <span id="sfx-filename">NONE</span>
+                            <button id="copyButton">Copy to clipboard</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </content>
+        <footer>
+            <div class="wrapper">
+                <p>Pull requests may be submitted to and the source code for it can be found at<br/><a href="https://github.com/DanielOaks/UCSFilenameCopier">http://github.com/DanielOaks/UCSFilenameCopier</a></p>
+            </div>
+        </footer>
+    </body>
+    <script>
+
+    </script>
+</html>
